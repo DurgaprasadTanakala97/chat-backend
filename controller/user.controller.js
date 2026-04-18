@@ -6,6 +6,7 @@ import { v2 as cloudinary} from 'cloudinary'
 
 export const signup = catchAsyncError(async (req,res,next)=>{
  const {fullName ,email,password } = req.body;
+ console.log(fullName,email,password)
  if(!fullName || !email || !password){
     return res.status(400).json({
         success:false,
@@ -43,6 +44,7 @@ const user = await  User.create({
         secure_url:""
     }
 });
+console.log(user)
 generateJWTToken(user, "User registered successfully", 201, res);
 });
 
