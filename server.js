@@ -31,7 +31,7 @@ cloudinary.config({
 
 dbConnection();
 app.use(cors({
-  origin:[process.env.FRONTEND_URL],
+  origin:[process.env.FRONTEND_URL,"https://69e337e1f5e13c283cd85387--sam-vaada.netlify.app"],
   credentials:true,
   methods:["GET","POST","PUT","DELETE"]
 }));
