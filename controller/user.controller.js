@@ -84,7 +84,7 @@ export const signout = catchAsyncError(async (req,res,next)=>{
    res.status(200).cookie("token","" ,{
     maxAge :0,
     httpOnly:true,
-    sameSite:None,
+    sameSite:"none",
     secure:true,
    }).json({
     sucess:true,
